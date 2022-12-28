@@ -1,0 +1,133 @@
+.right{
+	overflow:auto;
+    background-image: url("images/portfoliobg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+h1.somemywork{
+	width: 600px;
+	position:static;
+	margin-top:50px;
+	text-align:center; 
+	font-family: 'Caveat', cursive;
+	font-size:80px; 
+	background-color:white; 
+	animation: opacity 2s;	
+}
+  /*Gallery */
+h1.photoname{
+	font-family: 'Indie Flower', cursive;
+	font-size:50px;
+	text-align:center;  
+	background-color:rgba(255,255,255,0.7); 
+	width: 300px; 
+	position:static;
+	animation: photoname 2s;
+}
+
+.gallery img{
+    margin: 15px;
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    border:solid white 4px;
+    animation: move 2s;
+    animation-timing-function: ease-out;
+}
+
+.gallery img:hover{
+    transform: scale(1.1);
+}
+
+
+@keyframes move {
+  0% {transform: scale(0);opacity:0;}
+  60%{transform: scale(0.7);opacity:0;}
+  100% {transform: scale(1.0);opacity:1;}
+}
+@keyframes opacity {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes photoname {
+  0% {width:0;opacity:0;}
+  40%{width:300;opacity:0;}
+  100% {width:300px;opacity:1;}
+}
+
+
+/* VIDEOS */
+
+
+.videos{
+	text-align:center;
+	
+}
+
+.videos iframe{
+	margin-top:30px;
+	width:790px;
+	height:440px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+@media only screen and (max-width: 1200px) { 
+	.videos iframe{
+		transform:scale(0.7);
+	}
+}
+
+
+
+
+/* MOBILE DESIGN */
+
+@media only screen and (max-width: 920px) { 
+h1.somemywork{
+	width:100%;
+	font-size:40px;
+	animation: opacity 1s;
+}
+h1.photoname{
+    animation: opacity 2s;
+	font-size:30px;
+}
+
+.gallery img{
+	border:solid white 4px;
+    margin: 10px;
+    width:100px;
+    height: 100px;
+    object-fit: cover;
+    animation: opacity 2s;
+    animation-timing-function: ease-out;       
+}
+.gallery img:hover{
+    filter: grayscale(0%);
+    transform: scale(1);
+}
+
+.videos iframe{
+	margin:0;
+	width:90%;
+	height:auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+	
+}
+/*END MOBILE DESIGN*/
+
+
+.footer {
+	height:100px;
+}

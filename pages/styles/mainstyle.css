@@ -1,0 +1,167 @@
+body{
+overflow:hidden;
+margin:0;
+padding:0;}
+
+.container {
+            height: 100vh;
+            width:100%;
+            display: flex;			
+        }
+        
+      .right {
+			width: calc(100% - 300px);  
+        }
+
+/* SIDE MENU */
+nav.sidemenu {
+            width: 300px;
+            background-color: rgb(254,254,254);animation: opacity 1.5s;
+        }
+.logoimage{
+	width:100%;
+}
+.logo{
+		width: 150px;
+		margin:auto;
+		margin-top:50px;
+	}
+	
+h1.name{
+	text-align: center;
+	font-family: 'sans-serif' ,cursive;
+	font-size:30px;
+}	
+
+a{
+	text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+.menu{
+	height:100%;
+	margin-top:30%;
+	//background-color:red;
+}
+
+.menu a{
+	color:grey;
+	text-align:center;
+	font-size:16px;
+	font-family: 'Indie Flower', cursive;
+	font-weight:bold;
+	margin:15px;
+	display: block;
+	transition:0.4s;
+}
+.menu a.active{
+	color: black;
+}
+
+.menu a:hover{
+	color: black;
+	transform:scale(1.1);	
+}
+
+@keyframes opacity {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* END SIDE MENU */
+
+
+/*MOBILE MENU*/
+.navmenu{display:none;}
+#toggle {display: none;}
+.navmenu a{
+	clear: right;
+		text-decoration: none;
+		color: black;
+		margin: 0 10px;
+		line-height: 50px;
+}
+label{display:none;}
+.navlogo{display:none;}
+@media only screen and (max-width: 920px) { 
+ label {
+        display: block;
+        cursor: pointer;
+		margin-right: 40px;
+		font-size: 30px;
+		line-height: 50px;
+		float: right;
+		position:relative;
+		z-index:2;
+    }
+		
+    nav.mobilmenu{
+		display:block;
+		width:100%;
+		height:50px;
+		background-color:white;
+		border-bottom: 1px solid #EAEAEB;
+		position:relative;
+		z-index:1;
+	}
+	
+	.navmenu{
+		display:none;
+		background-color:white;
+		width:100%;
+		animation: menu 0.5s;
+	}
+	
+	.navmenu a {
+		display:block;
+		height:50px;
+		border-bottom: 1px solid #EAEAEB;
+		text-align:center;
+		font-family: 'Indie Flower', cursive;	
+	}
+
+    #toggle:checked + .navmenu {
+        display: block;	
+    }
+	
+@keyframes menu {
+  0% {opacity:0;transform: translate(0%,-100%);}
+  100% {opacity:1;transform: translate(0%,0%);}
+}
+
+.navlogo{
+	display:block;
+	height:40px;
+	width:50px;
+	margin-left:50px;
+	margin-top:5px;
+	float:left;
+	position:relative;
+	z-index:2;
+}
+nav.sidemenu{display:none;}
+ .right{width:100%;}
+}
+/*END MOBILE MENU*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* MOBILE DESIGN*/
+ @media only screen and (max-width: 920px) {
+ 
+ 
+
+	
+
+ }
+ /* END MOBILE DESIGN*/

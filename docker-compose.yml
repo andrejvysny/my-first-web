@@ -1,14 +1,8 @@
-version: '3.9'
-
 services:
 
-  nginx-proxy:
-    image: ghcr.io/andrejvysny/apache:latest
+  web:
+    image: ghcr.io/andrejvysny/php-apache:8.3
     ports:
       - "80:80"
-
-    environment:
-      APACHE_DOCUMENT_ROOT: /var/www/html
-
     volumes:
-      - .:/var/www/html
+      - .:/var/www/html/public
